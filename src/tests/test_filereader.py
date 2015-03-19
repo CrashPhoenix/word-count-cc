@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import unittest, sys, os
 import filereader
-from .utils import INPUT_PATH, OUTPUT_PATH
+from .utils import INPUT_DIR, OUTPUT_PATH
 
 class TestFileReader(unittest.TestCase):
     def setUp(self):
@@ -9,6 +9,8 @@ class TestFileReader(unittest.TestCase):
 
     def test_filereader(self):
         #raise AssertionError()
+        self.fr._read(INPUT_DIR)
+        self.fr.run()
         pass
 
 if __name__ == '__main__':
