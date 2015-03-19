@@ -1,1 +1,1 @@
-from .filereader import print_path
+from .filereader import FileReader
