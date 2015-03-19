@@ -21,7 +21,7 @@ class FileReader(object):
         Read file contents
         '''
         if os.path.isdir(path):
-            for dir in os.listdir(path):
+            for dir in sorted(os.listdir(path)):
                 self._read(os.path.join(path, dir))
         elif os.path.isfile(path):
             self._process_file(path)
@@ -34,4 +34,10 @@ class FileReader(object):
             with open(path) as f:
                 for line in f:
                     d.write(line)
+
+    def _normalize(self, word):
+        '''
+        Cleanse the word
+        '''
+        return word
 
