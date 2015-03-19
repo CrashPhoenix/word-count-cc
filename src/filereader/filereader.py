@@ -12,9 +12,9 @@ class FileReader(object):
         self.out_path = out_path
 
     def run(self, source_dir=None, out_path=None):
-        source_dir = source_dir if source_dir else self.source_dir
-        out_path = out_path if out_path else self.out_path
-        pass
+        self.source_dir = source_dir if source_dir else self.source_dir
+        self.out_path = out_path if out_path else self.out_path
+        self._read(self.source_dir)
 
     def _read(self, path):
         '''
@@ -30,7 +30,6 @@ class FileReader(object):
         '''
         Process file
         '''
-        print self.out_path
         with open(self.out_path, 'wb+') as d:
             with open(path) as f:
                 for line in f:

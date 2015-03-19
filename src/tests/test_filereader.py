@@ -8,8 +8,6 @@ class TestFileReader(unittest.TestCase):
         self.fr = filereader.FileReader()
 
     def test_filereader(self):
-        #raise AssertionError()
-        self.fr._read(INPUT_DIR)
         self.fr.run()
         pass
 
