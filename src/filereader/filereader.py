@@ -1,13 +1,13 @@
 import os
 import pandas
 
-from utils import INPUT_DIR, OUTPUT_PATH
+from utils import INPUT_DIR, OUTPUT_FILEREADER_PATH
 
 class FileReader(object):
     '''
     Abstract class to read files in a directory
     '''
-    def __init__(self, source_dir=INPUT_DIR, out_path=OUTPUT_PATH):
+    def __init__(self, source_dir=INPUT_DIR, out_path=OUTPUT_FILEREADER_PATH):
         self.source_dir = source_dir
         self.out_path = out_path
 
